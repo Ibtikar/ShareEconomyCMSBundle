@@ -171,6 +171,16 @@ class CmsContact
     {
         return $this->getUser() ? $this->getUser()->getFullName() : "---";
     }
+    
+    public function displayUserPhone()
+    {
+        return $this->getUser() ? $this->getUser()->getPhone() : "---";
+    }
+
+    public function displayUserEmail()
+    {
+        return $this->getUser() ? $this->getUser()->getEmail() : "---";
+    }
 
     public function getTypeName()
     {
