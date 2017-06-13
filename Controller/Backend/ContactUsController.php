@@ -30,6 +30,17 @@ class ContactUsController extends DashboardController
 
     public function getListQuery()
     {
+        $showUserEmail = $this->getParameter('ibtikar_share_economy_cms.showUserEmail');
+        $showUserPhone = $this->getParameter('ibtikar_share_economy_cms.showUserPhone');
+
+        if($showUserEmail)
+        {
+            array_splice($this->listColumns, 3, 0, [['email', ['method' => 'displayUserEmail', 'isSortable' => false]]]);
+        }
+        if($showUserPhone)
+        {
+            array_splice($this->listColumns, 4, 0, [['phone', ['method' => 'displayUserPhone', 'isSortable' => false]]]);
+        }
         $listTemplate = $this->getParameter('ibtikar_share_economy_cms.dashboard_list_template');
         $this->get('twig')->addGlobal('ibtikar_share_economy_cms_dashboard_list_template', $listTemplate);
 
