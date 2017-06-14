@@ -5,5 +5,7 @@
 'User': 'المستخدم'
 'Type': 'النوع'
 'Created At': 'تاريخ الإنشاء'
+'Email': 'البريد'
+'Phone': 'التليفون'
 'Search in user names and emails': 'البحث بالإسم أو بالبريد الإلكتروني'
 'Contact Us List': 'قائمة اتصل بنا'
